@@ -2,3 +2,19 @@ body,
 html {
     font-size: 10px;
 }
+
+input {
+    display: none;
+}
+
+article {
+    display: none;
+}
+
+label {
+    font-size: 2rem;
+}
+
+input:checked ~ article{
+    display: block;
+}
