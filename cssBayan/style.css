@@ -16,15 +16,33 @@ input {
     display: none;
 }
 
+.arrow {
+    display: none;
+    width: 3rem;
+}
+
 .bayan {
     min-height: 100vh;
-    max-width: 80rem;
+    max-width: calc(100vw - 10rem);
     margin: 0 auto;
     /*transition: all .3s;*/
 }
 
 .bayan__blocks {
-    /*transition: all .3s;*/
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+/*.arrow:has(.bayan__blocks:hover)  {*/
+/*    display: block;*/
+/*    width: 3rem;*/
+/*}*/
+.bayan__blocks:hover  {
+    background-color: gray;
+}
+
+.bayan__blocks:hover > .bayan__block > label > .arrow {
+    display: block;
 }
 
 .bayan__block {
@@ -42,13 +60,15 @@ article {
 
 
 article > label > img {
+    display: block;
+    border-radius: 5rem;
     width: 0;
     height: 0;
     transition: all .3s;
 }
 
 article > label > img:hover {
-    transform: scale(0.9);
+    box-shadow: 0 0 0.8rem 1rem rgba(255, 238, 23, 1) ;
     transition: all .3s;
     cursor: pointer;
 }
@@ -86,4 +106,24 @@ input:checked ~ label {
 
 input ~ label {
     color: red;
+}
+
+@media screen and (max-width: 820px) {
+    .bayan {
+        max-width: calc(100vw - 5rem);
+    }
+
+    label {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .bayan {
+        max-width: calc(100vw - 2rem);
+    }
+
+    label {
+        font-size: 1rem;
+    }
 }
