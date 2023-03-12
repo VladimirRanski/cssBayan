@@ -1,20 +1,88 @@
 body,
 html {
     font-size: 10px;
+    background-color: #ccc;
+
+    transition: all .3s;
+}
+
+h1 {
+    color: indigo;
+    font-size: 5rem;
+    text-align: center;
 }
 
 input {
     display: none;
 }
 
+.bayan {
+    min-height: 100vh;
+    max-width: 80rem;
+    margin: 0 auto;
+    /*transition: all .3s;*/
+}
+
+.bayan__blocks {
+    /*transition: all .3s;*/
+}
+
+.bayan__block {
+    margin-bottom: 3rem;
+}
+
+div > label {
+    border-bottom: 0.2rem dotted #fff;
+    margin-bottom: 1rem;
+}
+
 article {
-    display: none;
+    transition: all .3s;
+}
+
+
+article > label > img {
+    width: 0;
+    height: 0;
+    transition: all .3s;
+}
+
+article > label > img:hover {
+    transform: scale(0.9);
+    transition: all .3s;
+    cursor: pointer;
 }
 
 label {
-    font-size: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
-input:checked ~ article{
-    display: block;
+.arrow {
+    width: 3rem;
+}
+
+.bayan__block:hover > article > label > img,
+input:checked ~ article > label > img {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 80rem;
+    height: auto;
+    transition: all .3s;
+}
+
+.bayan__block:hover > label > .arrow,
+input:checked ~ label > .arrow {
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+input:checked ~ label {
+    color:blue;
+}
+
+input ~ label {
+    color: red;
 }
