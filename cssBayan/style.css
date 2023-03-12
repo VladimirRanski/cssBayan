@@ -1,6 +1,6 @@
 body,
 html {
-    font-size: 10px;
+    font-size: 0.625em;
     background-color: #ccc;
 
     transition: all .3s;
@@ -30,7 +30,7 @@ input {
 
 .bayan__blocks {
     padding: 1rem;
-    border: 1px solid black;
+    border: 0.1rem solid black;
 }
 
 /*.arrow:has(.bayan__blocks:hover)  {*/
